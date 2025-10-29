@@ -1,0 +1,115 @@
+<body>
+
+
+     
+    <h1 id="sample">This is sample manipulation content</h1>
+    <button onclick="change()">Change Content</button>
+    <p class="para">This is para</p>
+    <h1 id="Added"></h1>
+    <input id="input1"   placeholder="Enter the number" type="number">
+    <input id="input2" placeholder="Enter the second number" type="number">
+    <button onclick="addTheNumber()">Add</button>
+    
+    <h1 id="changeContent"></h1>
+    <input id="changeExample" placeholder="Type something" onkeyup="keyupExample()">
+    <div id="divSample"></div>
+    <button onclick="addIntoDivTag()">append</button>
+    <button onclick=" getData()">getData</button>
+    <button onclick="postaData()">postData</button>
+    
+
+          <script>
+        function change(){
+        let content = document.getElementById("sample");
+        let text = content.textContent;
+        console.log(text);
+        let paracontent = document.getElementsByClassName("para");
+        console.log(paracontent);
+        console.log(paracontent[0].textContent);
+        paracontent[0].textContent = "replaced";
+        content.textContent = "Content got replaced";
+
+        }
+
+        function addTheNumber(){
+            let input1 = document.getElementById("input1").value;
+            let input2 = document.getElementById("input2").value;
+            let change = Number(input1);
+            console.log(change);
+            console.log(input1*input2);
+            let htag = document.getElementById("Added");
+            htag.textContent = input1*input2;
+        }
+
+        function keyupExample(){
+            let inputparam = document.getElementById("changeExample").value;
+            let h1val = document.getElementById("changeContent");
+            h1val.textContent = inputparam;
+        }
+
+        function addIntoDivTag(){
+            let sa = document.createElement("h1");
+             let sa1 = document.createElement("h1");
+            let divcon = document.getElementById("divSample");
+            sa.textContent = "Hi h1 tag created";
+            sa1.textContent = "Hi h1 tag created";
+            divcon.append(sa);
+             divcon.append(sa1);
+        }
+
+         async function getData() {
+             try{
+                 let response=await fetch("https://dummyjson.com/users");
+                 let result= await response.json();
+               console.log=(result.users);
+             let data= result.users;
+             for(let i=0; i< data.length; i++){
+                let sample = data[i].bank.cardnumber;
+                console.log(sample);
+             }
+                
+             }catch (error){
+                console.log(error);
+
+             }
+             
+                
+             }
+
+
+             let user = {
+            userId: 1,
+            id: 1,
+            title: "sample",
+            isActive: true
+        }
+     
+        async function postaData(){
+            let a = 1;
+            let response = await fetch("https://jsonplaceholder.typicode.com/posts/1",{
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    "Accept": 'application/json'
+                },
+                body: JSON.stringify(user)            
+            
+            } );
+        }
+            async function deleteaData(){
+            let a = 1;
+            let response = await fetch("https://jsonplaceholder.typicode.com/posts/1",{
+                method: 'DELETE'           
+            
+            } );
+        }
+    </script>
+ 
+</body>
+
+
+
+
+
+
+            
