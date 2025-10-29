@@ -1,0 +1,37 @@
+.SampleOverflow{
+    width: 200px;
+    height: 100px;
+    background-color: goldenrod;
+    overflow: scroll;
+    overflow: auto;
+    
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+    border: solid 1px;
+    display: inline-block;
+    /* flex-direction: row; */
+
+}
+
+a{
+    font-size: 20px;
+}
+
+a:hover{
+    font-size: 20px;
+    background-color:pink;
+    color:brown;
+}
+a:visited{
+    color: pink;
+}
+
+a:visited{
+    color: yellowgreen;
+}
+
+

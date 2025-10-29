@@ -1,0 +1,53 @@
+h1{
+    position: relative;
+    top: 200px;
+    left: 20px;
+    width: 350;
+    text-align: center;
+    z-index: 10;
+    color:hotpink;
+}
+
+.sampleDiv{ 
+    width: 100px;
+    height: 100px;
+    background-color: cadetblue;
+}
+.divone{
+    position: relative;
+    width:450px;
+    z-index: 8;
+    background-color: aqua;
+}
+.divtwo{
+    position: relative;
+    width: 350px;
+    top: 20px;
+    background-color: chocolate;
+    z-index: 7;
+}
+.divthree{
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    background-color: brown;
+    z-index: 6;
+}
+.divfour{
+    position: absolute;
+    width: 450;
+    height: 150;
+    background-color: darkgray;
+    z-index: 5;
+    top: 30px;
+
+}
+.divfive{
+    position: absolute;
+    width: 450px;
+    height: 150px;
+    background-color: burlywood;
+    z-index: 6;
+    top: 50px;
+}
+
