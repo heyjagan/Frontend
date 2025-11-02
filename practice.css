@@ -1,0 +1,47 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-image:url("Html.jpg") ;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.main-div{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    border-color: black ;
+    border-style: solid;
+    
+}
+
+/* .form{
+    padding: 30px;
+    border-color: black ;
+    border-style: solid; 
+} */
+
+.login-btn{
+    margin-left: 32%;
+    height: 35px;
+    width: 70px;
+    color: blueviolet;
+}
+
+#username{
+    margin-bottom: 20px;
+    border-radius: 4px;
+    padding: 15px;
+    border-width: 0;
+    display: block;
+}
+
+#password{
+    margin-bottom: 20px;
+    border-radius: 4px;
+    padding: 15px;
+    border-width: 0;
+    display: block;
+
+}

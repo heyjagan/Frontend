@@ -14,6 +14,8 @@ document.getElementById("newDataForm").addEventListener("submit", function(event
 
     if (newObj.username === "jd") {
         console.log("username already exists, please login");
+        window.location.href("overflow.html");
+        window.location.replace("overflow.html")
     } else {
         console.log("Registration completed. Thanks!");
     }
